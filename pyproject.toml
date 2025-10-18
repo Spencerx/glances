@@ -25,7 +25,6 @@ dependencies = [
   "windows-curses; platform_system == 'Windows'",
   "shtab; platform_system != 'Windows'",
   "jinja2",
-  "pyinstrument>=5.1.1",
 ]
 description = "A cross-platform curses-based monitoring tool"
 dynamic = ["version"]
@@ -47,6 +46,7 @@ dev = [
   "pillow>=10.0.1",
   "pre-commit",
   "py-spy",
+  "pyinstrument>=5.1.1",
   "pyright",
   "pytest",
   "requirements-parser",
@@ -95,7 +95,9 @@ export = [
 ]
 gpu = ["nvidia-ml-py"]
 graph = ["pygal"]
-ip = ["netifaces2"]
+ip = [
+  "netifaces2",
+]
 raid = ["pymdstat"]
 sensors = ["batinfo; platform_system == 'Linux'"]
 smart = ["pySMART.smartx"]
